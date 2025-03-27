@@ -1,0 +1,30 @@
+.navigation {
+    width: 1250px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+}
+
+.nav_item {
+    font-family: var(--font-primary);
+    font-size: 13px;
+    font-weight: 400;
+    padding: 10px 0;
+    border-bottom: 2px solid #ffffff;
+}
+
+.nav_item:hover {
+    border-bottom: 2px solid #000000;
+    font-weight: 500;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+}
+
+.nav_container {
+    display: flex;
+    justify-content: center;
+}
