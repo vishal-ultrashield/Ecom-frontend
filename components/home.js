@@ -13,8 +13,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import 'swiper/css/effect-fade';
 
-export default function HomeBody({ collections1, collections2 }) {
-    console.log('HomeBody props:', { collections1, collections2 }); // Add this for debugging
+export default function HomeBody({ collections }) {
     return (
         <div className={`${styles.top_sec} flex_col`}>
             <div className="default_width">
@@ -83,22 +82,22 @@ export default function HomeBody({ collections1, collections2 }) {
                     </div>
                 </section>
                 <section className={styles.product_tabs}>
-                    <h3 className={styles.text_center}>Exclusive Deals & Offers</h3>
-                    <ProductTabs collections={collections1} />
+                    <h3 className={styles.text_center}>Shop by Category</h3>
+                    <ProductTabs collections={collections} />
                 </section>
                 <section className={styles.banner24}>
                     <Image src={Banner2} width={1250} alt="Banner 3" />
                 </section>
                 <section className={styles.product_tabs}>
                     <h3 className={styles.text_center}>Home Essentials</h3>
-                    <ProductTabs collections={collections2} />
+                    <ProductTabs collections={collections} />
                 </section>
                 <section className={styles.banner25}>
                     <Image src="/assets/airfryer_banner.jpeg" width={616} height={300} alt="Airfryer Banner" />
                     <Image src="/assets/trimmer_banner.jpeg" width={616} height={300} alt="Trimmer Banner" />
                 </section>
                 <section className={styles.product_tabs1}>
-                    <ProductTabs collections={collections2} />
+                    <ProductTabs collections={collections} />
                 </section>
                 <section className={styles.brands}>
                     <h3 className={styles.text_center_in_real}>Discover Leading Brands</h3>

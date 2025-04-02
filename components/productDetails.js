@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import api from '../lib/api'; // Adjust path as needed
+import api from '../lib/api';
 
 const ProductDetails = ({ productId }) => {
     const [product, setProduct] = useState(null);
@@ -28,9 +28,9 @@ const ProductDetails = ({ productId }) => {
     return (
         <div className="product-details">
             <h1>{product.name}</h1>
-            {product.image && (
+            {product.images && product.images.length > 0 && (
                 <img
-                    src={product.image}
+                    src={product.images[0].src}
                     alt={product.name}
                     style={{ maxWidth: '300px', marginBottom: '20px' }}
                 />
@@ -40,8 +40,8 @@ const ProductDetails = ({ productId }) => {
                 {product.price && (
                     <p>Regular Price: ${Number(product.price).toFixed(2)}</p>
                 )}
-                {product.originalPrice && (
-                    <p>Original Price: ${Number(product.short_description).toFixed(2)}</p>
+                {product.regular_price && (
+                    <p>Original Price: ${Number(product.regular_price).toFixed(2)}</p>
                 )}
             </div>
         </div>
