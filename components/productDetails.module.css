@@ -1,0 +1,25 @@
+.productDetails {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.productImage {
+    max-width: 100%;
+    height: auto;
+}
+
+.price {
+    font-size: 24px;
+    color: #e91e63;
+}
+
+.oldPrice {
+    font-size: 18px;
+    color: #666;
+    text-decoration: line-through;
+}
+
+.description {
+    margin: 20px 0;
+}

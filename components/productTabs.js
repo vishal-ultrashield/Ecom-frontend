@@ -1,14 +1,16 @@
-// productTabs.js
+// components/productTabs.js
 'use client';
 
 import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
+import Link from 'next/link'; // Import Link
 import styles from './product-tabs.module.css';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
 export default function ProductTabs({ collections = {} }) {
+    console.log('Collections received in ProductTabs:', collections);
     const [activeTab, setActiveTab] = useState(Object.keys(collections)[0] || '');
 
     const calculateDiscount = (price_old, price) => {
@@ -58,21 +60,23 @@ export default function ProductTabs({ collections = {} }) {
                     ) : (
                         collections[activeTab].products.map((product) => (
                             <SwiperSlide key={product.id}>
-                                <div className={styles.productCard}>
-                                    {calculateDiscount(product.price_old, product.price) && (
-                                        <p className={styles.discount}>
-                                            {calculateDiscount(product.price_old, product.price)}% OFF
-                                        </p>
-                                    )}
-                                    <img src={product.image} alt={product.name} className={styles.productImage} />
-                                    <h3>{product.name}</h3>
-                                    <div className={styles.price_stack}>
-                                        <p className={styles.product_price}>{product.price}</p>
-                                        {product.price_old && (
-                                            <p className={styles.product_old_price}>MRP {product.price_old}</p>
+                                <Link href={`/product/${product.id}`} passHref>
+                                    <div className={styles.productCard}>
+                                        {calculateDiscount(product.price_old, product.price) && (
+                                            <p className={styles.discount}>
+                                                {calculateDiscount(product.price_old, product.price)}% OFF
+                                            </p>
                                         )}
+                                        <img src={product.image} alt={product.name} className={styles.productImage} />
+                                        <h3>{product.name}</h3>
+                                        <div className={styles.price_stack}>
+                                            <p className={styles.product_price}>{product.price}</p>
+                                            {product.price_old && (
+                                                <p className={styles.product_old_price}>MRP {product.price_old}</p>
+                                            )}
+                                        </div>
                                     </div>
-                                </div>
+                                </Link>
                             </SwiperSlide>
                         ))
                     )}
