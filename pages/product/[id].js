@@ -1,7 +1,6 @@
-// pages/product/[id].js
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import ProductDetails from '../../components/ProductDetails'; // Adjust path
+import ProductDetails from '../../components/ProductDetails';
 import api from '../../lib/api';
 
 export async function getStaticPaths() {
