@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import ProductDetails from '../../components/ProductDetails';
+import ProductDetails from '../../components/productDetails';
 import api from '../../lib/api';
 
 export async function getStaticPaths() {
