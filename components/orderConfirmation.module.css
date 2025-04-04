@@ -1,0 +1,10 @@
+.orderConfirmation {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.orderConfirmation a {
+    color: #e91e63;
+    text-decoration: none;
+}

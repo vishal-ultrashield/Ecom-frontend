@@ -23,3 +23,21 @@
 .description {
     margin: 20px 0;
 }
+
+.quantityInput {
+    width: 60px;
+    margin-right: 10px;
+    padding: 5px;
+}
+
+.addToCartButton {
+    padding: 10px 20px;
+    background: #e91e63;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.addToCartButton:hover {
+    background: #d81b60;
+}

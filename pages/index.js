@@ -1,14 +1,13 @@
-// index.js
-import Header from '../components/header';
-import HomeBody from '../components/home';
+// pages/index.js
 import Head from 'next/head';
-import Footer from '../components/footer';
-import Navigation from '../components/navigation';
+import HomeBody from '../components/home';
+import Layout from '../components/Layout';
 import { getCollections } from '../data/collections';
 
 export async function getStaticProps() {
   try {
     const { collections } = await getCollections();
+    console.log('Collections in getStaticProps:', collections);
     return {
       props: {
         collections: collections || {},
@@ -16,6 +15,7 @@ export async function getStaticProps() {
       revalidate: 3600,
     };
   } catch (error) {
+    console.error('Error in getStaticProps:', error);
     return {
       props: {
         collections: {},
@@ -26,17 +26,13 @@ export async function getStaticProps() {
 }
 
 export default function Home({ collections }) {
+  console.log('Collections in Home component:', collections);
   return (
-    <>
+    <Layout>
       <Head>
         <title>ECOM - Fashion Tribe</title>
       </Head>
-      <Header />
-      <div className='sticky'>
-        <Navigation />
-      </div>
       <HomeBody collections={collections} />
-      <Footer />
-    </>
+    </Layout>
   );
 }

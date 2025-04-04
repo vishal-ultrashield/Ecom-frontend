@@ -1,6 +1,8 @@
+// pages/product/[id].js
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import ProductDetails from '../../components/productDetails';
+import Layout from '../../components/Layout';
 import api from '../../lib/api';
 
 export async function getStaticPaths() {
@@ -42,11 +44,11 @@ export default function ProductPage({ product }) {
     }
 
     return (
-        <>
+        <Layout>
             <Head>
                 <title>{product.name} - ECOM Fashion Tribe</title>
             </Head>
             <ProductDetails product={product} />
-        </>
+        </Layout>
     );
 }
