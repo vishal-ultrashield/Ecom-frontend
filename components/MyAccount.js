@@ -1,8 +1,6 @@
-// components/MyAccount.js
 import styles from './myAccount.module.css';
 
 export default function MyAccount() {
-    // Placeholder for user data (integrate with WooCommerce auth later)
     const user = { name: "John Doe", email: "john@example.com" };
 
     return (

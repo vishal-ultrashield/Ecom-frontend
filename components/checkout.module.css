@@ -1,35 +1,121 @@
+/* components/checkout.module.css */
 .checkout {
-    padding: 20px;
-    max-width: 800px;
+    padding: 30px;
+    max-width: 1250px;
     margin: 0 auto;
+    font-family: var(--font-primary);
+    border: 1px solid #00000020;
+    border-radius: 30px;
+    background-color: #00000010;
+}
+
+.checkoutFlex {
     display: flex;
-    justify-content: space-between;
 }
 
-.checkout form {
-    flex: 1;
-    margin-right: 20px;
+.checkoutFlexChild {
+    width: 70%;
+    padding-right: 50px;
 }
 
-.checkout input {
-    display: block;
+.checkoutFlexChild input {
     width: 100%;
+    padding: 14px;
+    margin: 5px 0;
+    border-radius: 10px;
+    border: 1px solid #00000020;
+}
+
+.flexRow {
+    display: flex;
+    gap: 10px;
+}
+
+.checkoutFlexChild .flexRow input {
+    width: 50%;
+}
+
+.paymentMethods {
+    margin: 20px 0;
+}
+
+.paymentMethods input {
+    width: 20px;
+}
+
+.paymentMethods h2 {
+    font-size: 1.5rem;
     margin-bottom: 10px;
-    padding: 8px;
+}
+
+.paymentOption {
+    margin: 10px 0;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.paymentOption input[type="radio"] {
+    margin-right: 10px;
+}
+
+.paymentForm {
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.paymentForm input {
+    display: block;
+    margin: 5px 0;
+    padding: 5px;
+    width: 100%;
+    max-width: 200px;
+}
+
+.payButton {
+    padding: 10px 20px;
+    background-color: #ff9900;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.payButton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
 }
 
 .orderSummary {
-    flex: 1;
+    border-left: 1px solid #ddd;
+    padding: 0 50px 50px 50px;
+    width: 30%;
 }
 
 .placeOrderButton {
-    padding: 10px 20px;
-    background: #e91e63;
+    padding: 16px 30px;
+    background-color: var(--primary-color);
     color: white;
     border: none;
+    border-radius: 30px;
     cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 10px;
 }
 
-.placeOrderButton:hover {
-    background: #d81b60;
+.placeOrderButton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.summaryDetails {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #00000020;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }

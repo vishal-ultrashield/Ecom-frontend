@@ -1,4 +1,3 @@
-// components/OrderConfirmation.js
 import styles from './orderConfirmation.module.css';
 import Link from 'next/link';
 

@@ -1,4 +1,3 @@
-// pages/my-account.js
 import Head from 'next/head';
 import Layout from '../components/Layout';
 import MyAccount from '../components/MyAccount';

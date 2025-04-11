@@ -1,43 +1,333 @@
 .productDetails {
-    padding: 20px;
-    max-width: 800px;
+    max-width: 1250px;
     margin: 0 auto;
+    padding: 20px 0;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-.productImage {
-    max-width: 100%;
-    height: auto;
+.productGallery {
+    width: 40%;
+}
+
+.mainImage {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+}
+
+.mainImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.thumbnailSlider {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 5px 0;
+}
+
+.thumbnail {
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.thumbnail.activeThumbnail {
+    border-color: var(--primary-color);
+}
+
+.thumbnail.activeThumbnail:before {
+    position: absolute;
+    content: "";
+    width: 58px;
+    height: 58px;
+    background-color: var(--primary-color);
+    opacity: 0.1;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.productContent {
+    width: 58%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.naming {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border: 1px solid #00000020;
+    padding: 20px 30px;
+    border-radius: 30px;
+    width: 100%;
+    gap: 6px;
+}
+
+.namingTags p {
+    background-color: #000000;
+    padding: 8px 10px;
+    border-radius: 30px;
+    color: #ffffff;
+    font-family: var(--font-primary);
+    font-size: 12px;
+    align-self: flex-start;
+}
+
+.namingTags {
+    display: flex;
+    gap: 10px;
+}
+
+.naming h1 {
+    font-size: 32px;
+    font-family: var(--font-primary);
+    margin-top: 4px;
+}
+
+.shortDescription {
+    font-family: var(--font-primary);
+    font-size: 14px;
+}
+
+.pricing {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    width: 50%;
+    padding: 30px;
+    border-radius: 30px;
+}
+
+.pricingHead {
+    font-family: var(--font-primary);
+    font-size: 16px;
+    font-weight: 700;
+    background-color: #FFFFFF;
+    color: var(--primary-color);
+    padding: 10px 14px;
+    border-radius: 20px;
+    align-self: flex-start;
+    margin-bottom: 68px;
 }
 
 .price {
-    font-size: 24px;
-    color: #e91e63;
+    font-size: 36px;
+    font-family: var(--font-primary);
+    color: #FFFFFF;
+    margin-bottom: 10px;
+    font-weight: 600;
 }
 
 .oldPrice {
-    font-size: 18px;
-    color: #666;
+    font-size: 12px;
+    color: #FFFFFF;
+    font-family: var(--font-primary);
     text-decoration: line-through;
+    margin-bottom: 10px;
 }
 
-.description {
-    margin: 20px 0;
+.addToCart1 {
+    display: flex;
+    align-items: center;
+}
+
+.addToCart1 input[type=number]::-webkit-inner-spin-button {
+    opacity: 1;
+    background: transparent;
 }
 
 .quantityInput {
-    width: 60px;
-    margin-right: 10px;
     padding: 5px;
+    width: 55px;
+    margin-right: 10px;
+    border: 2px solid #FFFFFF;
+    padding: 13px 10px;
+    color: #FFFFFF;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: var(--primary-color);
 }
 
 .addToCartButton {
     padding: 10px 20px;
-    background: #e91e63;
-    color: white;
-    border: none;
+    background-color: #FFFFFF;
+    color: var(--primary-color);
+    border: 2px solid #FFFFFF;
+    border-radius: 10px;
     cursor: pointer;
+    font-size: 20px;
+    font-family: var(--font-primary);
+    font-weight: 600;
+    transition: 0.3s;
 }
 
 .addToCartButton:hover {
-    background: #d81b60;
+    background-color: transparent;
+    color: #FFFFFF;
+    transition: 0.3s;
+}
+
+.addToCartButton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    margin: -7px 0;
+}
+
+.star {
+    font-size: 24px;
+    color: #ccc;
+    /* Gray for empty stars */
+}
+
+.filledStar {
+    color: #f5c518;
+    /* Gold for filled stars */
+}
+
+.ratingValue {
+    margin-left: 5px;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: var(--font-primary);
+    color: #666;
+}
+
+.ratingCount {
+    margin-left: 5px;
+    font-size: 12px;
+    font-weight: 400;
+    font-family: var(--font-primary);
+    color: #000000;
+}
+
+.description_pan {
+    width: 47%;
+    border: 1px solid #00000020;
+    padding: 30px;
+    border-radius: 30px;
+    background-color: #f0f0f0;
+}
+
+.description_pan h2 {
+    font-family: var(--font-primary);
+    margin-bottom: 6px;
+    font-size: 16px;
+}
+
+.description {
+    font-family: var(--font-primary);
+    font-size: 12px;
+    color: #4b4a4a;
+    padding-left: 16px;
+}
+
+.line {
+    width: 100%;
+    border-top: 1px solid #00000020;
+    margin: 20px 0;
+}
+
+.warranty {
+    font-family: var(--font-primary);
+    font-size: 14px;
+    font-weight: 500;
+    color: #4b4a4a;
+}
+
+.tabs {
+    margin-top: 20px;
+    font-family: var(--font-primary);
+}
+
+.tabNav {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+}
+
+.tabButton {
+    padding: 10px 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #666;
+    transition: color 0.3s;
+}
+
+.tabButton:hover {
+    color: #000;
+}
+
+.activeTab {
+    color: #000;
+    border-bottom: 2px solid #000;
+    font-weight: bold;
+}
+
+.tabContentWrapper {
+    padding: 20px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-top: none;
+    width: 100%;
+}
+
+.tabContent h3 {
+    margin-top: 0;
+    font-size: 18px;
+}
+
+.tabContent ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.tabContent p {
+    margin: 10px 0;
+}
+
+.tabChild {
+    display: flex;
+    gap: 30px;
+}
+
+.tabHeading {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.tabHeadDesc ul {
+    list-style-type: none;
+}
+
+.tabHeadDesc ul li {
+    margin-bottom: 2px;
+}
+
+.tabHeadDesc {
+    line-height: 24px;
 }

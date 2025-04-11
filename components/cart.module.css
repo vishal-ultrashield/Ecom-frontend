@@ -1,7 +1,11 @@
 .cart {
-    padding: 20px;
-    max-width: 800px;
+    padding: 30px;
+    max-width: 1250px;
     margin: 0 auto;
+    font-family: var(--font-primary);
+    border: 1px solid #00000020;
+    border-radius: 30px;
+    background-color: #00000010;
 }
 
 .empty {
@@ -20,43 +24,56 @@
     width: 100px;
     height: auto;
     margin-right: 20px;
+    border: 1px solid #00000020;
+    border-radius: 10px;
 }
 
 .itemDetails {
     flex: 1;
 }
 
+.itemDetails p {
+    color: #00000090;
+    font-size: 14px;
+    padding-top: 6px;
+}
+
 .quantityInput {
-    width: 60px;
-    margin: 10px 0;
-    padding: 5px;
+    width: 50px;
+    margin: 10px 10px 10px 0;
+    padding: 10px;
+    border: 1px solid #00000020;
+    border-radius: 10px;
 }
 
 .removeButton {
-    background: #ff4444;
+    background: #00000090;
     color: white;
     border: none;
-    padding: 5px 10px;
+    padding: 10px 10px;
     cursor: pointer;
-}
-
-.removeButton:hover {
-    background: #cc0000;
+    border-radius: 10px;
 }
 
 .total {
     text-align: right;
     margin-top: 20px;
+    font-size: 32px;
+    font-weight: 700;
 }
 
 .checkoutButton {
-    padding: 10px 20px;
-    background: #e91e63;
+    padding: 16px 30px;
+    background: var(--primary-color);
     color: white;
     border: none;
     cursor: pointer;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 10px;
 }
 
 .checkoutButton:hover {
-    background: #d81b60;
+    background: #000000;
 }

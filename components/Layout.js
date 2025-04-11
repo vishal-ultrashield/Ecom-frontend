@@ -26,9 +26,6 @@ function LayoutContent({ children }) {
                     </Link>
                 </div>
             )}
-            <div className="sticky">
-                <Navigation />
-            </div>
             {children}
             <Footer />
         </div>

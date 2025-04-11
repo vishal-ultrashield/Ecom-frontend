@@ -1,4 +1,3 @@
-// pages/place-order.js
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react'; // Add useState
 import api from '../lib/api';

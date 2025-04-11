@@ -1,4 +1,3 @@
-// pages/index.js
 import Head from 'next/head';
 import HomeBody from '../components/home';
 import Layout from '../components/Layout';

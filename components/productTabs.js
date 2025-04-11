@@ -1,4 +1,3 @@
-// components/productTabs.js
 'use client';
 
 import { useState } from 'react';

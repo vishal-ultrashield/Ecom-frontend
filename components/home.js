@@ -96,6 +96,7 @@ export default function HomeBody({ collections }) {
                     <Image src="/assets/airfryer_banner.jpeg" width={616} height={300} alt="Airfryer Banner" />
                     <Image src="/assets/trimmer_banner.jpeg" width={616} height={300} alt="Trimmer Banner" />
                 </section>
+
                 <section className={styles.product_tabs1}>
                     <ProductTabs collections={collections} />
                 </section>

@@ -1,4 +1,3 @@
-// components/Cart.js
 import { useCart } from '../lib/CartContext';
 import Link from 'next/link';
 import styles from './cart.module.css';
@@ -19,7 +18,7 @@ export default function Cart() {
 
     return (
         <div className={styles.cart}>
-            <h1>Your Cart</h1>
+            <h1>Your Cart</h1><br></br>
             {cart.map(item => (
                 <div key={item.id} className={styles.cartItem}>
                     <img src={item.image} alt={item.name} className={styles.itemImage} />
