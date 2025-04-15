@@ -1,5 +1,76 @@
+/* components/myAccount.module.css */
 .myAccount {
-    padding: 20px;
     max-width: 800px;
     margin: 0 auto;
+    padding: 20px;
+}
+
+.myAccount h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tabs button {
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f8f9fa;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.tabs .activeTab {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.logoutButton {
+    margin-left: auto;
+    background-color: #dc3545;
+    color: white;
+    border-color: #dc3545;
+}
+
+.logoutButton:hover {
+    background-color: #c82333;
+    border-color: #c82333;
+}
+
+.tabContent {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.dashboard,
+.orders {
+    min-height: 300px;
+}
+
+.ordersList {
+    list-style: none;
+    padding: 0;
+}
+
+.orderItem {
+    border: 1px solid #eee;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.orderItem p {
+    margin: 5px 0;
+}
+
+.orderItem ul {
+    list-style: none;
+    padding-left: 20px;
 }

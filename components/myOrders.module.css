@@ -1,0 +1,26 @@
+.ordersContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.ordersList {
+    list-style: none;
+    padding: 0;
+}
+
+.orderItem {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.orderItem p {
+    margin: 5px 0;
+}
+
+.orderItem ul {
+    list-style: none;
+    padding-left: 20px;
+}

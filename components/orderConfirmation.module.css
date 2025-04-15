@@ -1,10 +1,26 @@
 .orderConfirmation {
-    padding: 20px;
-    max-width: 800px;
+    padding: 30px;
+    max-width: 1250px;
     margin: 0 auto;
+    font-family: var(--font-primary);
+    border: 1px solid #00000020;
+    border-radius: 30px;
+    background-color: #00000010;
 }
 
 .orderConfirmation a {
-    color: #e91e63;
+    color: #ffffff;
+    border: 1px solid var(--primary-color);
+    padding: 6px 10px;
+    background-color: var(--primary-color);
     text-decoration: none;
+    border-radius: 10px;
+}
+
+.orderDetails {
+    display: flex;
+}
+
+.orderDetailsChild {
+    width: 30%;
 }
